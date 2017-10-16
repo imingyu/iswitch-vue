@@ -1,0 +1,30 @@
+{
+    "name": "iswitch-vue",
+    "version": "0.1.0",
+    "description": "一个实现Switch功能的Vue组件。",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/imingyu/iswitch-vue.git"
+    },
+    "author": "",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/imingyu/iswitch-vue/issues"
+    },
+    "homepage": "https://github.com/imingyu/iswitch-vue#readme",
+    "dependencies": {
+        "iswitch-core": "^0.1.0",
+        "vue": "^2.5.2"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "file-loader": "^1.1.5",
+        "vue-loader": "^13.3.0",
+        "webpack": "^3.7.1"
+    }
+}
