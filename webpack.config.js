@@ -14,8 +14,7 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
-                    loaders: {
-                    }
+                    extractCSS: true
                 }
             },
             {
@@ -37,19 +36,12 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js'
         }
     },
-    devServer: {
-        historyApiFallback: true,
-        noInfo: true
-    },
     performance: {
         hints: false
     },
-    devtool: '#eval-source-map',
+    devtool: '#source-map',
     plugins: [
-        new ExtractTextPlugin({
-            filename: 'index.css',
-            allChunks: true,
-        })
+        new ExtractTextPlugin("index.css")
     ]
 }
 
@@ -59,7 +51,7 @@ if (process.env.NODE_ENV === 'production') {
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"production"'
+                NODE_ENV: process.env.NODE_ENV
             }
         }),
         new webpack.optimize.UglifyJsPlugin({
